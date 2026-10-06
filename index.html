@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandeep Saini - Data Analyst Internship Portfolio</title>
+  <style>
+    :root {
+      --ink: #151515;
+      --muted: #5f6266;
+      --line: #d7dbe0;
+      --paper: #f7f8fa;
+      --accent: #ff6b3d;
+      --accent-soft: #fff0e9;
+      --green: #236b4f;
+      --blue: #245a82;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .shell {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 56px 0 48px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 850px;
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .hero-visual {
+      width: 100%;
+      min-height: 310px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 22px;
+      display: grid;
+      align-content: center;
+      gap: 18px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 120px 1fr 92px;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .bar-track {
+      height: 28px;
+      background: #e6e8eb;
+      border: 1px solid #cfd4da;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--ink);
+    }
+
+    .bar-fill.good {
+      background: var(--green);
+    }
+
+    .bar-fill.risk {
+      background: var(--accent);
+    }
+
+    section {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .kpi {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 18px;
+      min-height: 122px;
+    }
+
+    .kpi span {
+      color: var(--muted);
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .kpi strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .task-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .task {
+      border: 1px solid var(--line);
+      padding: 22px;
+      background: #ffffff;
+    }
+
+    .task h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+    }
+
+    .task p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .skills li {
+      border: 1px solid var(--line);
+      background: var(--accent-soft);
+      color: #8f351d;
+      padding: 8px 10px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .story img {
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .story p {
+      margin-top: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    footer {
+      padding: 34px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .story {
+        grid-template-columns: 1fr;
+      }
+
+      .kpi-grid,
+      .task-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell nav">
+      <div class="brand">Sandeep Saini - Data Analyst Portfolio</div>
+      <nav class="nav-links" aria-label="Portfolio navigation">
+        <a href="#projects">Projects</a>
+        <a href="#story">Story</a>
+        <a href="#skills">Skills</a>
+        <a href="assets/Sandeep_Saini_DataAnalyst_Final_Presentation.pptx">Final Deck</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Capstone Integration and Portfolio Finalization</p>
+          <h1>End-to-end sales analytics portfolio</h1>
+          <p>
+            A complete internship project covering data cleaning, EDA, dashboarding,
+            statistical validation, and business storytelling.
+          </p>
+        </div>
+        <div class="hero-visual" aria-label="Portfolio result comparison chart">
+          <div class="bar-row">
+            <strong>Booked sales</strong>
+            <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
+            <span>INR 630k</span>
+          </div>
+          <div class="bar-row">
+            <strong>Realized sales</strong>
+            <div class="bar-track"><div class="bar-fill good" style="width: 51%"></div></div>
+            <span>INR 321k</span>
+          </div>
+          <div class="bar-row">
+            <strong>Failed orders</strong>
+            <div class="bar-track"><div class="bar-fill risk" style="width: 57%"></div></div>
+            <span>56.5%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <h2>Portfolio Snapshot</h2>
+        <div class="kpi-grid">
+          <div class="kpi"><span>Orders analyzed</span><strong>138</strong></div>
+          <div class="kpi"><span>Booked net sales</span><strong>INR 630k</strong></div>
+          <div class="kpi"><span>Realized sales</span><strong>INR 321k</strong></div>
+          <div class="kpi"><span>Return/cancel rate</span><strong>56.5%</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="shell">
+        <h2>Project Repositories</h2>
+        <div class="task-grid">
+          <article class="task">
+            <h3>Task 1: Data Wrangling</h3>
+            <p>Cleaned the dataset, assessed quality, transformed fields, and prepared reliable analysis-ready data.</p>
+            <a href="https://github.com/sainisandeep0021026-dot/task1-data-wrangling">Open repository</a>
+          </article>
+          <article class="task">
+            <h3>Task 2: EDA and BI</h3>
+            <p>Measured sales trends, category performance, channel behavior, and business questions with SQL-style outputs.</p>
+            <a href="https://github.com/sainisandeep0021026-dot/task2-eda-business-intelligence">Open repository</a>
+          </article>
+          <article class="task">
+            <h3>Task 3: Dashboarding</h3>
+            <p>Built a deep-dive customer segmentation analysis and interactive dashboard for KPI monitoring.</p>
+            <a href="https://github.com/sainisandeep0021026-dot/task3-interactive-dashboard">Open repository</a>
+          </article>
+          <article class="task">
+            <h3>Task 4: Story and Validation</h3>
+            <p>Created a final stakeholder deck and validated a business hypothesis with a two-proportion z-test.</p>
+            <a href="https://github.com/sainisandeep0021026-dot/task4-data-storytelling-statistical-validation">Open repository</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="shell story">
+        <img src="assets/portfolio_overview.png" alt="Portfolio overview chart showing booked sales, realized sales, and return or cancellation rate">
+        <div>
+          <h2>Validated Business Story</h2>
+          <p>
+            The strongest finding is that the business should not only chase order volume.
+            The key issue is revenue leakage: booked sales are much higher than realized
+            sales because many orders are returned or cancelled.
+          </p>
+          <p>
+            The statistical test showed that online versus offline channel difference was
+            not significant at alpha 0.05. The practical recommendation is to improve
+            order quality and focus recovery actions on high-risk customer segments.
+          </p>
+          <a href="assets/Sandeep_Saini_DataAnalyst_Final_Presentation.pptx">Download final presentation</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="shell">
+        <h2>Skills Demonstrated</h2>
+        <ul class="skills">
+          <li>Python</li>
+          <li>Data Cleaning</li>
+          <li>EDA</li>
+          <li>SQL Questions</li>
+          <li>KPI Design</li>
+          <li>Dashboarding</li>
+          <li>Customer Segmentation</li>
+          <li>Hypothesis Testing</li>
+          <li>PowerPoint Storytelling</li>
+          <li>GitHub Portfolio</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">Sandeep Saini - Data Analyst Internship Portfolio</div>
+  </footer>
+</body>
+</html>
